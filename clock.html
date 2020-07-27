@@ -5,10 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="startTime()">
+    <div style="font-size:30px;font-family: Arial;" id="txt"></div>
+    <button onclick="stop()">Stop Timer</button>
     <script>
-        function startTIme(){
-            var today = new Date
+         function startTime(){
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+
+
+            //add zero
+            m = chckTime(m)
+            s = chckTime(s)
+
+            document.getElementById("txt").innerHTML = h+":"+m+":"+s
+
+          
+        }
+        
+
+        var r = setInterval(function(){
+                startTime();
+        }, 1000);
+
+
+       
+        function chckTime(i){
+            if(i<10)
+            {
+                i="0"+i;
+            }
+            return i;
+        }
+
+        function stop(){
+            console.log("Hii")
+            clearInterval(r);
         }
     </script>
 </body>
