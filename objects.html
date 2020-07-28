@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //    function person(){
+
+       
+    //     this.firstName = "John",
+        
+    //     this.showMessage = function(){
+    //                console.log(this.firstName)
+    //         }
+    //    }
+
+    //    var per1 = new person();
+    //    person.prototype.age = 34
+    //    console.log(per1.age)
+
+    //    var per2 = new person();
+    //    console.log(per2.age)
+
+    var funcs = []
+    for(var i=0;i<3;i++){
+        funcs[i] = function(){
+            console.log("Value:"+i)
+        }
+    }
+
+    for(var j=0;j<3;j++){
+        funcs[j]();
+    }
+   </script>
+</body>
+</html>
