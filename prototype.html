@@ -24,6 +24,25 @@
                 return 1;
             }
         }
+
+        //we borrow the sing method for the lizard using bind
+        //const singLizard = dragon.sing.bind(lizard);
+        //console.log(singLizard())
+
+        //lizard to get all the props and methods of the dragon ob
+        lizard.__proto__ = dragon //prototypal inheritance
+        // console.log(lizard.sing())
+
+        // console.log(lizard.fire)
+
+        console.log(lizard.__proto__.fight())
+
+
+
+        // console.log(dragon.__proto__)
+
+        // console.log(dragon.isPrototypeOf(lizard))
+        // console.log(lizard.isPrototypeOf(dragon))
     </script>
 </body>
 </html>

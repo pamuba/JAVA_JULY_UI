@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(firstName, lastName){
+            this.FirstName = firstName || "unknown";
+            this.LastName = lastName || "unknown"
+        };
+
+        Person.prototype.getFullName = function(){
+            return this.FirstName + " " + this.LastName;
+        }
+
+        function Student(firstName, lastName, schoolName, grade){
+            Person.call(this, firstName, lastName)
+
+            this.SchoolName = schoolName || "unknown"
+            this.Grade = grade || 0;
+        }
+
+        Student.prototype = new Person()
+
+
+
+        var std = new Student("James", "Hunt", 'Little Flower', 10)
+        console.log(std.getFullName())
+        console.log(std instanceof Person)
+        console.log(std instanceof Student)
+        
+    </script>
+</body>
+</html>
