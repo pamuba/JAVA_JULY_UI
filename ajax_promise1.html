@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let url = "http://127.0.0.1:5500/cat.jpeg";
+        const loadImage = url => {
+            return new Promise((resolve, reject)=>{
+                var request = new XMLHttpRequest();
+
+                request.open("GET", url, true);
+                
+                request.responseType = "arraybuffer";
+
+                //request loads, check if its successful
+                request.onload = function(){
+                    if(request.status === 200){
+                        resolve(request.response)
+                    }
+                    else{
+                        reject(Error(request.statusText))
+                    }
+                };
+                request.send();
+            })
+        };
+
+
+        const embedImage = url => {
+            loadImage(url).then((result)=>{
+
+                const img  = new Image();
+
+                var binaryData = [];
+                binaryData.push(result)
+
+                var imageURL = window.URL.createObjectURL(new Blob(binaryData, {type:"image/jpeg"}));
+
+                img.src = imageURL;
+
+                document.querySelector('body').appendChild(img);
+
+            },function(err){
+                console.log(err)
+            })
+        }
+
+        embedImage(url);
+    </script>
+</body>
+</html>
