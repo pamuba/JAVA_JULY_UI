@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let age = prompt("Enter UR age.", 18);
+        // let welcome = (age < 18) ? 
+        // () => alert('Hello'):
+        // () => alert('Hii')
+
+
+        // welcome();
+
+        //1. doesnt have this
+        //2. doent have new - cant be used as ctrs 
+        //3. doesnt have arguments
+        //4. doest have super
+
+
+        // let group = {
+        //     title:"Our Group",
+        //     students:["John", "Jim", "Alice"],
+
+        //     showList: function(){
+        //         this.students.forEach(function(student){
+        //             alert(this.title+":"+student)
+        //         }.bind(this)              
+        //         )
+        //     },
+        // }
+        // group.showList()
+        
+    //    function mul(a,b){
+    //        console.log(a)
+    //        console.log(b)
+    //        return a*b
+    //    }
+
+    //    let fn1 = mul.bind(null,2);
+
+    //    alert(fn1(33))
+
+       //partial fns
+
+        //binding
+        // let user  = {
+        //     firstName : "John"
+        // }
+
+        // function func(){
+        //     alert(this.firstName)
+        // }
+
+        // let bfn = func.bind(user);
+        // bfn();
+
+        function hi(a){
+            alert (this.name+" "+ a)
+        }
+
+        let user = { name: "John"}
+        let admin = { name: "Admin"}
+
+        hi.call(user, "Hello")
+        // hi.call(admin)
+
+    </script>
+</body>
+</html>

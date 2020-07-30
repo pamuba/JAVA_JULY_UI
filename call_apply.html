@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Each function is an instance of Function
+        //There are certain functions in the protype 
+        //that is available in each function
+
+        // function myFn(){}
+        // console.dir(myFn);
+
+        // console.log(myFn instanceof Function);
+
+        //CALL1
+        // const myObject = {
+        //     a:10,
+        //     b:null
+        // }
+        // function myFunction(){
+        //     console.log(this);
+        // }
+
+        // //called in Glbal execution context
+        // //no strict applied
+        // myFunction();//"this" is window
+        // myFunction.call(myObject);//"this" is{}
+
+        // //CALL2
+        //  const myObject = {
+        //     a:10,
+        //     b:null
+        // }
+        // function myFunction(a,b){
+        //     console.log(a+b);
+        //     console.log(this);
+        // }
+
+        // //called in Glbal execution context
+        // //no strict applied
+        // // myFunction();//"this" is window
+        // myFunction.call(myObject,10,3);//"this" is{a:10, b:null}
+
+
+        //CALL3
+        // const person1 = {
+        //     city:"Bangalore",
+        //     name:"Smith",
+        //     info:function(){
+        //         console.log(this.name+" lives in "+this.city);
+        //     }
+        // };
+        // const person2={
+        //     city:"paris",
+        //     name:"Alice"
+        // };
+        // console.log(person1.info())
+        // console.log(person1.info.call(person2))
+
+        //APPLY
+        // const myObject = {
+        //     a:10,
+        //     b:null
+        // }
+        // function myFunction(a,b){
+        //     console.log(a+b);
+        //     console.log(this);
+        // }
+        // myFunction.apply(myObject,[10,3]);//"this" is{a:10, b:null}
+
+        //BIND
+        const myObject = {
+            a:10,
+            b:null
+        }
+        function myFunction(a,b){
+            console.log(a+b);
+            console.log(this);
+        }
+        const customFunction = myFunction.bind(myObject,10,3);//"this" is{a:10, b:null}
+        console.log(customFunction());
+
+        const customFunction2 = myFunction.bind(myObject);
+        console.log(customFunction2(10,3));
+    </script>
+</body>
+</html>

@@ -10,8 +10,9 @@
         class Animal{
             constructor(name){
                 this.name = name;
-                this.speed = 0;
+                // this.speed = 0;
             }
+            id = 22;
             run(speed){
                 this.speed = speed;
                 console.log(`${this.name} runs with speed of ${this.speed}`)
@@ -22,23 +23,24 @@
             }
         }
 
-        let animal = new Animal("Rabbit");
-        animal.run(100);
+        let animal = new Animal("Rabbit")
+        animal.__proto__.speed = 0
+        // animal.run(100);
 
 
-        class Rabbit extends Animal{
-            run(s){
-                super.run(10000)
-                console.log("Dont want to run:"+s)
-            }
-            hide(){
-                console.log(`${this.name} hides`)
-            }
-        }
+        // class Rabbit extends Animal{
+        //     run(s){
+        //         super.run(10000)
+        //         console.log("Dont want to run:"+s)
+        //     }
+        //     hide(){
+        //         console.log(`${this.name} hides`)
+        //     }
+        // }
 
-        let rabbit = new Rabbit("White Rabbit");
-        rabbit.run(5)
-        rabbit.hide();
+        // let rabbit = new Rabbit("White Rabbit");
+        // rabbit.run(5)
+        // rabbit.hide();
     </script>
 </body>
 </html>
