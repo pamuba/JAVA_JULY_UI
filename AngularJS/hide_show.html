@@ -27,14 +27,15 @@
       </style>
 </head>
 <body ng-controller="myController">
-    <input type="checkbox"
+    <input type="checkbox" ng-model="hideSalary" /> Hide Salary
     <table>
         <thead>
             <tr>
                 <th>Name</th>
                 <th>Gender</th>
                 <th>City</th>
-                <th>Salary</th>
+                <th ng-hide="hideSalary">Salary</th>
+                <th ng-show="hideSalary">Salary</th>
             </tr>
         </thead>
         <tbody>
@@ -42,7 +43,8 @@
                 <td>{{ emp.name }}</td>
                 <td>{{ emp.gender }}</td>
                 <td>{{ emp.city }}</td>
-                <td>{{ emp.salary }}</td>
+                <td ng-hide="hideSalary">{{ emp.salary }}</td>
+                <td ng-show="hideSalary"> ##### </td>
             </tr>
         </tbody>
     </table>
