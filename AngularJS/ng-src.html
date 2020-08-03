@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.js"></script>
+    <script src="app1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div ng-controller="myController">
+        <div>
+            Name: {{country.name}}
+        </div>
+        <div>
+            Name: {{country.capital}}
+        </div>
+        <div>
+           <img ng-src="{{country.flag}}" style="height:100px; width:200px"/>
+        </div>
+    </div>
+</body>
+</html>
