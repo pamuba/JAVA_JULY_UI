@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.js"></script>
+    <script src="serviceDemo.js"></script>
+    <script src="stringService.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <table>
+            <tr>
+                <td>Your String</td>
+                <td><input type="text" ng-model="input"></td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td><input type="text" ng-model="output"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" ng-click="transformString(input)" value="Process String"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
