@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.js"></script>
     <script src="angular-router.js"></script>
     <script src="app8.js"></script>
     <title>Document</title>
 </head>
 <body ng-app="app">
-    
+
+    <div class="row">
+        <div class="col-sm-12 well">
+            HEADER
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 well">
+            <ul>
+                <li><a href="#/first-msg">First</a></li>
+                <li><a href="#/second-msg">Second</a></li>
+                <li><a href="#/third-msg">Third</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 well" style="height:100%">
+            <div ng-view></div>
+        </div>
+    </div>
+    <!-- Home Page Content<hr>
+    <a href="#/first-msg">First</a><br>
+    <a href="#/second-msg">Second</a>
+    <div ng-view>
+
+    </div> -->
 </body>
 </html>
