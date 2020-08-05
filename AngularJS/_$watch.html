@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <script>
+        var app = angular.module('watchApp', []);
+        app.controller('watchCtrl', function($scope){
+            $scope.count = -1
+            $scope.$watch('txtval', function(newVal, oldVal){
+                $scope.count = $scope.count + 1;
+            })
+        })
+    </script>
+</head>
+<body>
+    <div ng-app="watchApp" ng-controller="watchCtrl">
+        <h2>Whatch Demo</h2>
+        Enter Text: <input type="text" ng-model="txtval"><hr>
+        <span style="color: red;">Times $watch() Fired: {{count}}</span>
+
+    </div>
+</body>
+</html>
