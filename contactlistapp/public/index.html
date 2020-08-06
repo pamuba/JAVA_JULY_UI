@@ -42,13 +42,14 @@
                     <td>{{contact.name}}</td>
                     <td>{{contact.email}}</td>
                     <td>{{contact.number}}</td>
+                    <td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
                 </tr>
             </tbody>
         </table>
 
 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
     <script src="controllers/controller.js"></script>
 </body>
 </html>
