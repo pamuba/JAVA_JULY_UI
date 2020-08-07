@@ -1,0 +1,7 @@
+<h2>Event Binding</h2>
+<input type="text" [(ngModel)]="name"><br>
+{{name}}
+<hr>
+<input type="text" #myInput><br>
+<button (click)="onclick(myInput.value)">Greet</button>
+
