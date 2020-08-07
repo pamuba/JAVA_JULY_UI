@@ -1,0 +1,40 @@
+<!-- <h3 *ngIf="displayName; else elseBlock">
+    Angular8
+</h3>
+
+<ng-template #elseBlock>
+    <h3>
+        The other Angular8
+    </h3>
+</ng-template> -->
+<!-- 
+<div *ngIf="displayName; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+    <h3>
+        Angular8
+    </h3>
+</ng-template>
+
+
+<ng-template #elseBlock>
+    <h3>
+        The other Angular8
+    </h3>
+</ng-template> -->
+
+
+<!-- <h2>
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'" [style.color]="color">U picked red color</div>
+    <div *ngSwitchCase="'blue'" [style.color]="color">U picked blue color</div>
+    <div *ngSwitchCase="'green'" [style.color]="color">U picked green color</div>
+    <div *ngSwitchCase="'yellow'" [style.color]="color">U picked yellow color</div>
+    <div *ngSwitchDefault>Incorrect Color</div>
+</div>
+</h2> -->
+
+
+<div *ngFor="let color of colors;index as i; odd as o; even as e; first as f; last as l">
+    <h3>{{f}} {{l}} {{o}} {{e}} {{i}} {{color}}</h3>
+</div>

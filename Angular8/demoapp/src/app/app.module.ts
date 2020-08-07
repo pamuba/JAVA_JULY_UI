@@ -8,6 +8,10 @@ import { TestComponent } from './test/test.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { StructuralComponent } from './structural/structural.component';
+import { ChildComponent } from './child/child.component';
+import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
+import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     TestComponent,
     PropertyBindingComponent,
     ClassBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    StructuralComponent,
+    ChildComponent,
+    PipesDemoComponent,
+    CustomPipesComponent
   ],
   imports: [
     BrowserModule,

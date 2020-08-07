@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WECOME TO ANGULAR8 APP';
+  public name = "Partha"
 }
