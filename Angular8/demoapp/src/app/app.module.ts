@@ -16,6 +16,7 @@ import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
 import { CustomHerosPipe } from './custom-heros.pipe';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]

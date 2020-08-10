@@ -13,7 +13,8 @@ export class EmployeeListComponent implements OnInit {
   public employees = []
 
   ngOnInit(): void {
-    this.employees = this._employeeService.getEmployees()
+    this._employeeService.getEmployees()
+        .subscribe(data =>this.employees = data)
   }
 
 }
